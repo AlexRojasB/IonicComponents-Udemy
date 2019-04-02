@@ -1,30 +1,30 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-date-time",
-  templateUrl: "./date-time.page.html",
-  styleUrls: ["./date-time.page.scss"]
+  selector: 'app-date-time',
+  templateUrl: './date-time.page.html',
+  styleUrls: ['./date-time.page.scss']
 })
 export class DateTimePage implements OnInit {
   fechaNaci: Date = new Date();
   customPickerOptions;
   customDate;
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     this.customPickerOptions = {
       buttons: [
         {
-          text: "Save",
+          text: 'Save',
           handler: event => {
-            console.log("Clickd Save!");
-            console.log(event.day.vaue); // para obtener el dia
+            console.log('Clickd Save!');
+            console.log(event.day.vaue); //  para obtener el dia
           }
         },
         {
-          text: "Log",
+          text: 'Log',
           handler: () => {
-            console.log("Clicked Log. Do not Dismiss.");
+            console.log('Clicked Log. Do not Dismiss.');
             return false;
           }
         }
